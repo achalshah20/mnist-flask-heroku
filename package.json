@@ -12,7 +12,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/achalshah20/achal-mnist.git"
+    "url": "https://github.com/achalshah20/mnist-flask-heroku.git"
   },
   "engines": {
     "node": "6.x"
