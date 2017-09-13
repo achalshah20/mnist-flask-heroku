@@ -53,10 +53,11 @@ model.fit(x_train, y_train,
 
 testAcc = model.evaluate(x_test, y_test)
 
-jsonModel = model.to_json()
-with open('mnist_model.json','w') as f:
-    f.write(jsonModel)
-
-model.save_weights("mnist_model_weights.h5")
+model.save("final_model.h5")
+# jsonModel = model.to_json()
+# with open('mnist_model.json','w') as f:
+#     f.write(jsonModel)
+#
+# model.save_weights("mnist_model_weights.h5")
 print('Test loss:', testAcc[0])
 print('Test accuracy:', testAcc[1])

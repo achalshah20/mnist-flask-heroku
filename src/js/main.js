@@ -82,7 +82,7 @@ class Main {
                 return;
             }
             $.ajax({
-                url: '/api/mnist',
+                url: '/mnist',
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify(inputs),
