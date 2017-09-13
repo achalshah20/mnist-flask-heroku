@@ -12,7 +12,7 @@ model = keras.models.load_model('final_model.h5')
 
 @app.route('/mnist', methods=['POST'])
 def mnist():
-    input = ((255 - np.array(request.json, dtype=np.uint8)) / 255.0).reshape(1,28, 28,1)
+    input = (np.array(request.json, dtype=np.uint8) / 255.0).reshape(1,28, 28,1)
     output1 = model.predict(input)
     return jsonify(results=output1.tolist())
 
